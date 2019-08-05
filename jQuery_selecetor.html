@@ -1,0 +1,197 @@
+<html>
+    <head>
+        <title>jQuery_selector选择器</title>
+        <meta charset="utf-8"/>
+        <script src="js/common/jquery-3.2.1.min.js"></script>
+        <script src="js/jquery_selector.js"></script>
+    </head>
+    <body>
+        <div id="d1" style="border: 1px solid red">
+            write less,do more
+            <div id="d2">id为d1中的div里的div id="d2"</div>
+            <div class="c2">id为d1中的div里的div class="c2"</div>
+            <div class="c2">id为d1中的div里的div class="c2"</div>
+            <div class="c3">id为d1中的div里的div class="c3"</div>
+            <p>id为d1中的div里的div里的p段落</p>
+        </div>
+
+        <div class="c1">hello</div>
+        <div class="c1">jquery</div>
+        <span>空白标签</span>
+        <p>空白段落</p>
+        <br>
+        <a href="javascript:f1()">hello jquery 原生js写法</a>
+        <br>
+        <a href="javascript:f2()">hello jquery jQuery写法</a>
+        <br>
+        <a href="javascript:f3()">hello jquery jQuery写法 方法链</a>
+        <br>
+        <a href="javascript:f4()">dom对象转换成jQuery对象</a>
+        <br>
+        <a href="javascript:f5()">jQuery对象转换成dom对象</a>
+        <br>
+        <h2>基本选择器</h2>
+        <br>
+        <a href="javascript:f6()">id选择器</a>
+        <br>
+        <a href="javascript:f7()">class类选择器</a>
+        <br>
+        <a href="javascript:f8()">html选择器,元素选择器</a>
+        <br>
+        <a href="javascript:f9()">合并选择器</a>
+        <br>
+        <a href="javascript:f10()">*选择器</a>
+        <br>
+        <h2>层次选择器</h2>
+        <br>
+        <a href="javascript:f11()">select1 空格 select2</a>
+        <br>
+        <a href="javascript:f12()">select1 子选择器 select2</a>
+        <br>
+        <a href="javascript:f13()">select1 + select2</a>
+        <br>
+        <a href="javascript:f14()">select1 ~ select2</a>
+        <br>
+        <h2>过滤选择器</h2>
+        <caption>玛丽的一家</caption>
+        <table>
+            <thead>
+                <tr>
+                    <td>name</td>
+                    <td>age</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>marry</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>wyy</td>
+                    <td>18</td>
+                </tr>
+                <tr id="tr4">
+                    <td>little nurse</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>小芳</td>
+                    <td>26</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <br>
+        <a href="javascript:f16()">基本的过滤选择器用法</a>
+        <br>
+        <a href="javascript:f17()">基本的过滤选择器用法</a>
+        <br>
+        <a href="javascript:f18()">基本的过滤选择器用法</a>
+        <br>
+        <hr>
+        <div id="d3">
+            <div>这里是一个div</div>
+            <div></div>
+            <div>
+                <p>含有一个p标记的div</p>
+            </div>
+            <span>一个span标签</span>
+        </div>
+        <br>
+        <a href="javascript:f19()">内容过滤选择器用法</a>
+        <br>
+        <a href="javascript:f20()">内容过滤选择器用法</a>
+        <br>
+        <a href="javascript:f21()">内容过滤选择器用法</a>
+        <br>
+        <a href="javascript:f22()">内容过滤选择器用法</a>
+        <hr>
+        <div id="d4">
+            <div>这里是一个div</div>
+            <div style="display:none;">display:none</div>
+        </div>
+        <br>
+        <a href="javascript:f23()">可见性过滤选择器</a>
+        <br>
+        <a href="javascript:f24()">可见性过滤选择器</a>
+
+        <hr>
+        <div id="d5">
+            <div id="d5_1">这里是一个div,id=d5_1</div>
+            <div id="d5_2">这里是一个div,id=d5_2</div>
+            <div>没有id的div</div>
+        </div>
+        <br>
+        <a href="javascript:f25()">属性过滤器</a>
+        <br>
+        <a href="javascript:f26()">属性过滤器</a>
+        <br>
+        <a href="javascript:f27()">属性过滤器</a>
+
+        <hr>
+        <div id="d6">
+           <ul>
+               <li>item1</li>
+               <li>item2</li>
+               <li>item3</li>
+           </ul>
+           <ul>
+                <li>item1</li>
+                <li>item2</li>
+                <li>item3</li>
+           </ul>
+        </div>
+        <br>
+        <a href="javascript:f28()">子元素过滤选择器</a>
+        <br>
+        <a href="javascript:f29()">子元素过滤选择器</a>
+        <br>
+        <a href="javascript:f30()">子元素过滤选择器</a>
+
+        <hr>
+        <div id="d7">
+          <form id="form1">
+              username:<input type="text" name="username"/><br>
+              loginname:<input type="text" name="loginname" disabled="disabled"/><br>
+              <input id="btn" type="button" value="按钮" disabled="disabled"/>
+
+          </form>
+          <form id="form2">
+           兴趣:吃饭<input type="checkbox" name="interest" value="eating" checked="checked"/>
+           睡觉<input type="checkbox" name="interest" value="sleeping" checked="checked"/>
+           打豆豆<input type="checkbox" name="interest" value="playing" />
+        </form>
+        <form id="form3">
+           <select>
+               <option value="math">数学</option>
+               <option value="english" selected="selected">英语</option>
+               <option value="computer">计算机</option>
+           </select>
+         </form>
+
+        </div>
+        <br>
+        <a href="javascript:f30()">表单对象过滤选择器</a>
+        <br>
+        <a href="javascript:f31()">表单对象过滤选择器</a>
+        <br>
+        <a href="javascript:f32()">表单对象过滤选择器</a>
+        <br>
+        <a href="javascript:f33()">表单对象过滤选择器</a>
+
+        <hr>
+        <div id="d8">
+            <form id="form1">
+                username:<input type="text" name="username"/><br>
+                loginname:<input type="text" name="loginname" /><br>
+                <input id="btn" type="button" value="按钮"/>
+  
+            </form>
+
+        </div>
+        <br>
+        <a href="javascript:f34()">表单选择器</a>
+       
+        
+    </body>
+</html>
