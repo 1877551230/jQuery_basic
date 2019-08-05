@@ -184,7 +184,7 @@ function f32(){
 function f33(){
     alert($("#d7 #form3 select option:selected").val());
 }
-//表单选择器
+//表单选择器  val=value
 function f34(){
     var obj=$("#d8 #form1 input:button");
     obj.val("保存");
